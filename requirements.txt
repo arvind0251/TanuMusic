@@ -13,7 +13,6 @@ pykeyboard
 pyshorteners
 pillow==10.3.0
 psutil
-py-tgcalls==0.9.7
 pykeyboard
 pyrofork
 python-dotenv
@@ -24,11 +23,9 @@ spotipy
 wget
 tgcrypto
 unidecode
-yt-dlp==2024.7.7
 youtube-search
 youtube-search-python
 pornhub-api==0.3.0
-openai==1.35.7
 telegraph
 async_pymongo
 gpytranslate
@@ -36,7 +33,6 @@ search_engine_parser
 gtts
 git+https://github.com/AsmSafone/SafoneAPI
 lexica-api==1.5.7
-httpx==0.25.2
 gpytranslate
 emojis
 cloudscraper
