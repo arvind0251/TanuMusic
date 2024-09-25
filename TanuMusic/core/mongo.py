@@ -12,7 +12,7 @@ TEMP_MONGODB = "mongodb+srv://kuldiprathod2003:kuldiprathod2003@cluster0.wxqpikp
 
 if config.MONGO_DB_URI is None:
     LOGGER(__name__).warning(
-        "𝐍o 𝐌ONGO 𝐃B 𝐔RL 𝐅ound.. 𝐘our 𝐁ot 𝐖ill 𝐖ork 𝐎n My 𝐃atabase"
+        "No MongoDb Found your bot run on public mongodb.....💚"
     )
     temp_client = Client(
         "TannuMusic",
