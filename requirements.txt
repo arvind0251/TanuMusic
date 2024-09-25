@@ -49,7 +49,6 @@ qrcode
 pytz
 pydub
 apscheduler
-motor
 pymongo
 async-pymongo
 
