@@ -51,4 +51,4 @@ pydub
 apscheduler
 pymongo
 async-pymongo
-
+motor
