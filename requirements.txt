@@ -10,6 +10,7 @@ gitpython
 hachoir
 heroku3
 pykeyboard
+pymongo==3.12.0
 pyshorteners
 motor==3.4.0
 pillow==10.3.0
