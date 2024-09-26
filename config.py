@@ -53,10 +53,6 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  #❖ Fill this variable if your upstream repository is private
 
-#❖ Define file paths
-CLEANMODE_DB = os.path.join(config.TEMP_DB_FOLDER, "cleanmode.json")
-COMMAND_DB = os.path.join(config.TEMP_DB_FOLDER, "command.json")
-
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/C0DE_SEARCH")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/AsuraaSupports")
 
