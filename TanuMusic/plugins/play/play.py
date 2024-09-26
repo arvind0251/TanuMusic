@@ -7,7 +7,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from TanuMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app
-from TanuMusic.core.call import Anony
+from TanuMusic.core.call import Tanu
 from TanuMusic.utils import seconds_to_min, time_to_seconds
 from TanuMusic.utils.channelplay import get_channeplayCB
 from TanuMusic.utils.decorators.language import languageCB
@@ -288,7 +288,7 @@ async def play_commnd(
             return await mystic.delete()
         else:
             try:
-                await Anony.stream_call(url)
+                await Tanu.stream_call(url)
             except NoActiveGroupCall:
                 await mystic.edit_text(_["black_9"])
                 return await app.send_message(
