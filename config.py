@@ -11,16 +11,16 @@ API_ID = int(getenv("API_ID", None))
 API_HASH = getenv("API_HASH", None)
 
 #❖ Add Owner Username without @ 
-OWNER_USERNAME = getenv("OWNER_USERNAME", "Animefangilrl")
+OWNER_USERNAME = getenv("OWNER_USERNAME", "itzAsuraa")
 
 #❖  Get Your bot username
-BOT_USERNAME = getenv("BOT_USERNAME", "Niyotomusic_bot")
+BOT_USERNAME = getenv("BOT_USERNAME", "TanuMusicxBot")
 
 #❖  Don't Add style font 
-BOT_NAME = getenv("BOT_NAME", "niyotomusic")
+BOT_NAME = getenv("BOT_NAME", "Tanu Music")
 
 #❖ get Your Assistant User name
-ASSUSERNAME = getenv("ASSUSERNAME", "niyto_ASS")
+ASSUSERNAME = getenv("ASSUSERNAME", "TANU_ASS")
 
 #❖ Get your token from @BotFather on Telegram.
 BOT_TOKEN = getenv("BOT_TOKEN")
@@ -44,7 +44,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Rani0086/TanuMusic",
+    "https://github.com/itzAsuraa/TanuMusic",
 )
 
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
@@ -53,8 +53,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  #❖ Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/windbrakerhind")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/lolpagalokigc")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/C0DE_SEARCH")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/AsuraaSupports")
 
 #❖ Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
