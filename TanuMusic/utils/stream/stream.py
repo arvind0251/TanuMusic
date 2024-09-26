@@ -5,15 +5,16 @@ from typing import Union
 from pyrogram.types import InlineKeyboardMarkup
 
 import config
-from TanuMusic import Carbon, YouTube, app, YTB
+from TanuMusic import Carbon, YouTube, app
 from TanuMusic.core.call import Tanu
 from TanuMusic.misc import db
 from TanuMusic.utils.database import add_active_video_chat, is_active_chat
 from TanuMusic.utils.exceptions import AssistantErr
 from TanuMusic.utils.inline import aq_markup, close_markup, stream_markup
-from TanuMusic.utils.pastebin import Bin
+from TanuMusic.utils.pastebin import AnonyBin
 from TanuMusic.utils.stream.queue import put_queue, put_queue_index
 from TanuMusic.utils.thumbnails import get_thumb
+
 
 async def stream(
     _,
@@ -30,10 +31,8 @@ async def stream(
 ):
     if not result:
         return
-
     if forceplay:
-        await Tanu.force_stop_stream(chat_id)
-
+        await Anony.force_stop_stream(chat_id)
     if streamtype == "playlist":
         msg = f"{_['play_19']}\n\n"
         count = 0
@@ -75,7 +74,7 @@ async def stream(
                     db[chat_id] = []
                 status = True if video else None
                 try:
-                    file_path, direct = await YTB.download(
+                    file_path, direct = await YouTube.download(
                         vidid, mystic, video=status, videoid=True
                     )
                 except:
@@ -117,7 +116,7 @@ async def stream(
         if count == 0:
             return
         else:
-            link = await Bin(msg)
+            link = await AnonyBin(msg)
             lines = msg.count("\n")
             if lines >= 17:
                 car = os.linesep.join(msg.split(os.linesep)[:17])
@@ -131,7 +130,6 @@ async def stream(
                 caption=_["play_21"].format(position, link),
                 reply_markup=upl,
             )
-
     elif streamtype == "youtube":
         link = result["link"]
         vidid = result["vidid"]
@@ -140,7 +138,7 @@ async def stream(
         thumbnail = result["thumb"]
         status = True if video else None
         try:
-            file_path, direct = await YTB.download(
+            file_path, direct = await YouTube.download(
                 vidid, mystic, videoid=True, video=status
             )
         except:
@@ -201,7 +199,6 @@ async def stream(
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "stream"
-
     elif streamtype == "soundcloud":
         file_path = result["filepath"]
         title = result["title"]
@@ -252,7 +249,6 @@ async def stream(
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
-
     elif streamtype == "telegram":
         file_path = result["path"]
         link = result["link"]
@@ -305,7 +301,6 @@ async def stream(
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
-
     elif streamtype == "live":
         link = result["link"]
         vidid = result["vidid"]
@@ -372,7 +367,6 @@ async def stream(
             )
             db[chat_id][0]["mystic"] = run
             db[chat_id][0]["markup"] = "tg"
-
     elif streamtype == "index":
         link = result
         title = "ɪɴᴅᴇx ᴏʀ ᴍ3ᴜ8 ʟɪɴᴋ"
@@ -397,7 +391,7 @@ async def stream(
         else:
             if not forceplay:
                 db[chat_id] = []
-            await Tanu.join_call(
+            await Anony.join_call(
                 chat_id,
                 original_chat_id,
                 link,
