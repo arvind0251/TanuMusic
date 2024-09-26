@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from TanuMusic import app
-from TanuMusic.core.call import Anony
+from TanuMusic.core.call import Tanu 
 from TanuMusic.misc import SUDOERS, db
 from TanuMusic.utils import AdminRightsCheck
 from TanuMusic.utils.database import is_active_chat, is_nonadmin_chat
@@ -94,7 +94,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         text=_["admin_32"].format(CallbackQuery.from_user.mention),
     )
     try:
-        await Anony.speedup_stream(
+        await Tanu.speedup_stream(
             chat_id,
             file_path,
             speed,
