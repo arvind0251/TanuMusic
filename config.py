@@ -84,9 +84,16 @@ STRING5 = getenv("STRING_SESSION5", None)
 
 
 BANNED_USERS = filters.user()
+YTDOWNLOADER = 1
+TEMP_DB_FOLDER = "tempdb"
+LOG = 2
+LOG_FILE_NAME = "Tanulogs.txt"
 adminlist = {}
+chatstats = {}
+userstats = {}
 lyrical = {}
 votemode = {}
+clean = {}
 autoclean = []
 confirmer = {}
 
