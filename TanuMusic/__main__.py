@@ -38,9 +38,9 @@ async def init():
         importlib.import_module("TanuMusic.plugins" + all_module)
     LOGGER("TanuMusic.plugins").info("✦ Successfully Imported Modules...💞")
     await userbot.start()
-    await Anony.start()
+    await Tanu.start()
     try:
-        await Anony.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
+        await Tanu.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
         LOGGER("TanuMusic").error(
             "✦ Please turn on the videochat of your log group\channel.\n\n✦ Stopping Bot...💣"
@@ -48,7 +48,7 @@ async def init():
         exit()
     except:
         pass
-    await Anony.decorators()
+    await Tanu.decorators()
     LOGGER("TanuMusic").info(
         "✦ EDIT BY ➥ Asuraa🐝"
     )
