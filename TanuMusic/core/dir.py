@@ -10,13 +10,13 @@ from ..logging import LOGGER
 def dirr():
     print(f"Current working directory: {os.getcwd()} 💙")
     
-    assets_folder = "TanuMusic/assets"
+    assets_folder = "Tanumusic/assets"
     downloads_folder = "downloads"
     cache_folder = "cache"
 
     if assets_folder not in listdir():
         logging.warning(
-            f"{assets_folder} Folder not Found. Please clone or fork repository again.❤️"
+            f"{assets_folder} Folder not Found. Please clone or fork repository again.💕"
         )
         sys.exit()
         
