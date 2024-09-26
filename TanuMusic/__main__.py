@@ -6,7 +6,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from TanuMusic import LOGGER, app, userbot
-from TanuMusic.core.call import Anony
+from TanuMusic.core.call import Tanu
 from TanuMusic.misc import sudo
 from TanuMusic.plugins import ALL_MODULES
 from TanuMusic.utils.database import get_banned_users, get_gbanned
