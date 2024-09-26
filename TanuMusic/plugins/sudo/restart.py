@@ -18,7 +18,7 @@ from TanuMusic.utils.database import (
     remove_active_video_chat,
 )
 from TanuMusic.utils.decorators.language import language
-from TanuMusic.utils.pastebin import AnonyBin
+from TanuMusic.utils.pastebin import Bin
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -68,7 +68,7 @@ async def update_(client, message, _):
     _update_response_ = "❖ <b>ᴀ ɴᴇᴡ ᴜᴩᴅᴀᴛᴇ ɪs ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀ ᴛʜᴇ ʙᴏᴛ !</b>\n\n● ᴩᴜsʜɪɴɢ ᴜᴩᴅᴀᴛᴇs ɴᴏᴡ\n\n● <b><ᴜᴩᴅᴀᴛᴇs ➥</b>\n\n"
     _final_updates_ = _update_response_ + updates
     if len(_final_updates_) > 4096:
-        url = await AnonyBin(updates)
+        url = await Bin(updates)
         nrs = await response.edit(
             f"❖ <b>ᴀ ɴᴇᴡ ᴜᴩᴅᴀᴛᴇ ɪs ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀ ᴛʜᴇ ʙᴏᴛ !</b>\n\n● ᴩᴜsʜɪɴɢ ᴜᴩᴅᴀᴛᴇs ɴᴏᴡ\n\n● <b>ᴜᴩᴅᴀᴛᴇs ➥</b>\n\n<a href={url}>ᴄʜᴇᴄᴋ ᴜᴩᴅᴀᴛᴇs</a>"
         )
