@@ -2,7 +2,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from TanuMusic import YouTube, app
-from TanuMusic.core.call import Anony
+from TanuMusic.core.call import Tanu 
 from TanuMusic.misc import db
 from TanuMusic.utils import AdminRightsCheck, seconds_to_min
 from TanuMusic.utils.inline import close_markup
@@ -56,7 +56,7 @@ async def seek_comm(cli, message: Message, _, chat_id):
     if "index_" in file_path:
         file_path = playing[0]["vidid"]
     try:
-        await Anony.seek_stream(
+        await Tanu.seek_stream(
             chat_id,
             file_path,
             seconds_to_min(to_seek),
