@@ -3,8 +3,8 @@ import asyncio
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
-from TanuMusic import YouTube, app, YTB
-from TanuMusic.core.call import Tanu 
+from TanuMusic import YouTube, app
+from TanuMusic.core.call import Tanu
 from TanuMusic.misc import SUDOERS, db
 from TanuMusic.utils.database import (
     get_active_chats,
@@ -150,7 +150,7 @@ async def del_back_playlist(client, CallbackQuery, _):
         )
     elif command == "Stop" or command == "End":
         await CallbackQuery.answer()
-        await Anony.stop_stream(chat_id)
+        await Tanu.stop_stream(chat_id)
         await set_loop(chat_id, 0)
         await CallbackQuery.message.reply_text(
             _["admin_5"].format(mention), reply_markup=close_markup(_)
@@ -252,15 +252,7 @@ async def del_back_playlist(client, CallbackQuery, _):
                     video=status,
                 )
             except:
-                try:
-                    file_path, direct = await YTB.download(
-                        videoid,
-                        mystic,
-                        videoid=True,
-                        video=status,
-                    )
-                except:
-                    return await mystic.edit_text(_["call_6"])
+                return await mystic.edit_text(_["call_6"])
             try:
                 image = await YouTube.thumbnail(videoid, True)
             except:
