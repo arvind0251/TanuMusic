@@ -10,7 +10,7 @@ from ..logging import LOGGER
 def dirr():
     print(f"Current working directory: {os.getcwd()} 💙")
     
-    assets_folder = "Tanumusic/assets"
+    assets_folder = "tanumusic/assets"
     downloads_folder = "downloads"
     cache_folder = "cache"
 
