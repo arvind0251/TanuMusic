@@ -47,6 +47,32 @@ async def get_filters_count() -> dict:
         "filters_count": filters_count,
     }
 
+async def get_assistant(chat_id: int) -> str:
+    from TanuMusic.core.userbot import assistants
+
+    assistant = assistantdict.get(chat_id)
+    if not assistant:
+        dbassistant = await db.find_one({"chat_id": chat_id})
+        if not dbassistant:
+            userbot = await set_assistant(chat_id)
+            return userbot
+        else:
+            got_assis = dbassistant["assistant"]
+            if got_assis in assistants:
+                assistantdict[chat_id] = got_assis
+                userbot = await get_client(got_assis)
+                return userbot
+            else:
+                userbot = await set_assistant(chat_id)
+                return userbot
+    else:
+        if assistant in assistants:
+            userbot = await get_client(assistant)
+            return userbot
+        else:
+            userbot = await set_assistant(chat_id)
+            return userbot
+
 
 async def _get_filters(chat_id: int) -> Dict[str, int]:
     _filters = await filtersdb.find_one({"chat_id": chat_id})
