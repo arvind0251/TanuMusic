@@ -113,6 +113,17 @@ def stream_markup(_, chat_id):
     ]
     return buttons
 
+def telegram_markup(_, chat_id):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="Next",
+                callback_data=f"PanelMarkup None|{chat_id}",
+            ),
+            InlineKeyboardButton(text=_["CLOSEMENU_BUTTON"], callback_data="close"),
+        ],
+    ]
+    return buttons
 
 def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
     buttons = [
