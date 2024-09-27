@@ -26,7 +26,7 @@ import config
 from strings import get_string
 from TanuMusic import LOGGER, YouTube, app
 from TanuMusic.misc import db
-from TanuMusic.database.memorydb import (
+from TanuMusic.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_assistant,
