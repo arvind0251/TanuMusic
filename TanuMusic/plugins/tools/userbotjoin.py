@@ -6,7 +6,7 @@ from pyrogram.errors import InviteRequestSent
 
 from TanuMusic import app
 from TanuMusic.misc import SUDOERS
-from TanuMusic.database.assistantdb import get_assistant
+from TannuMusic.utils.database import get_assistant
 from TanuMusic.utils.userbotban import admin_filter
 
 links = {}
