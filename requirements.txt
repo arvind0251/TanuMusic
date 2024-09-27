@@ -15,7 +15,7 @@ lyricsgenius
 motor
 wget
 pillow==10.3.0
-pymongo
+pymongo==3.11.4
 psutil
 pytube
 pykeyboard
