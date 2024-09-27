@@ -107,6 +107,16 @@ async def get_assistant(chat_id: int) -> str:
             return userbot
 
 
+async def get_audio_bitrate(chat_id: int) -> str:
+    mode = audio.get(str(chat_id), "MEDIUM")
+    return {
+        "STUDIO": AudioQuality.STUDIO,
+        "HIGH": AudioQuality.HIGH,
+        "MEDIUM": AudioQuality.MEDIUM,
+        "LOW": AudioQuality.LOW,
+    }.get(mode, AudioQuality.MEDIUM)
+
+
 async def set_calls_assistant(chat_id):
     from TanuMusic.core.userbot import assistants
 
