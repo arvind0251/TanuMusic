@@ -18,7 +18,7 @@ from config import OWNER_ID
 from strings import get_command
 from TanuMusic import app
 from TanuMusic.misc import HAPP, SUDOERS, XCB
-from TanuMusic.database.memorydb import (
+from TanuMusic.utils.database import (
     get_active_chats,
     remove_active_chat,
     remove_active_video_chat,
