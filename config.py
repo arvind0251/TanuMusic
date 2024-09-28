@@ -28,13 +28,13 @@ BOT_TOKEN = getenv("BOT_TOKEN")
 #❖ Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 
-DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 600000))
+DURATION_LIMIT_MIN = getenv("DURATION_LIMIT", 600000)
 
 #❖  Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", "-1002009280180"))
+LOGGER_ID = getenv("LOGGER_ID", "-1002100219353")
 
 #❖ Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", "6961287189"))
+OWNER_ID = getenv("OWNER_ID", "7453278496")
 
 #❖  Your heroku app name
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
