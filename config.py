@@ -11,10 +11,10 @@ API_ID = int(getenv("API_ID", None))
 API_HASH = getenv("API_HASH", None)
 
 #❖ Add Owner Username without @ 
-OWNER_USERNAME = getenv("OWNER_USERNAME", "itzAsuraa")
+OWNER_USERNAME = getenv("OWNER_USERNAME", "Fflover098")
 
 #❖  Get Your bot username
-BOT_USERNAME = getenv("BOT_USERNAME", "TanuMusicxBot")
+BOT_USERNAME = getenv("BOT_USERNAME", "Avisha_music_bot")
 
 #❖  Don't Add style font 
 BOT_NAME = getenv("BOT_NAME", "˹ ᴛᴀɴᴜ ꭙ ᴍᴜsɪᴄ™ ♡゙")
@@ -31,10 +31,10 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 DURATION_LIMIT_MIN = getenv("DURATION_LIMIT", 600000)
 
 #❖  Chat id of a group for logging bot's activities
-LOGGER_ID = getenv("LOGGER_ID", "-1002136294449")
+LOGGER_ID = getenv("LOGGER_ID", "-1002043570167")
 
 #❖ Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = getenv("OWNER_ID", "7453278496")
+OWNER_ID = getenv("OWNER_ID", "6222794377")
 
 #❖  Your heroku app name
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME", None)
@@ -44,7 +44,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY", None)
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/itzAsuraa/TanuMusic",
+    "https://github.com/arvind0251/TanuMusic",
 )
 
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
